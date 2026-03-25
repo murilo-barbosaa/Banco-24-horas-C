@@ -1,0 +1,43 @@
+//banco 24 horas
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+int saque;
+int nota10,nota20,nota50,nota100,nota200;
+
+printf("Digite o valor do saque\n");
+scanf("%d",&saque);
+if(saque>=10 && saque<=1000){
+if(saque%10==0){
+nota200=saque/200;
+saque=saque%200;
+nota100=saque/100;
+saque=saque%100;
+nota50=saque/50;
+saque=saque%50;
+nota20=saque/20;
+saque=saque%20;
+nota10=saque/10;
+saque=saque%10;
+}
+if(nota200>0){
+printf("%d notaR$200\n",nota200);
+}
+if(nota100>0){
+printf("%d notaR$100\n",nota100);
+}
+if(nota50>0){
+printf("%d notaR$50\n",nota50);
+}
+if(nota20>0){
+printf("%d notaR$20\n",nota20);
+}
+if(nota10>0){
+printf("%d notaR$10\n",nota10);   
+}
+}else{
+printf("nao e possivel sacar menos que R$10 e mais que R$1000");
+}
+
+}
